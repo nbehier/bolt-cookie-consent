@@ -1,0 +1,46 @@
+# @see https://silktide.com/tools/cookie-consent/docs/installation/
+
+# The message shown by the plugin.
+message: This website uses cookies to ensure you get the best experience on our website
+
+# The text used on the dismiss button.
+dismiss: Got it!
+
+# The text shown on the link to the cookie policy (requires the link option to
+# also be set)
+learnMore: More info
+
+# The url of your cookie policy. If it’s set to null, the link is hidden.
+link:
+
+# The element you want the Cookie Consent notification to be appended to.
+# If null, the Cookie Consent plugin is appended to the body.
+#
+# Note: the majority of our built in themes are designed around the plugin
+# being a child of the body.
+container:
+
+# The theme you wish to use. Can be any of the themes from the style directory,
+# e.g. dark-top.
+#
+# If you wish to use your own CSS instead, specify the URL of your CSS file.
+# e.g. styles/my_custom_theme.css. This can be a relative or absolute URL.
+#
+# To stop Cookie Consent from loading CSS at all, specify false.
+theme: light-floating
+
+# The path for the consent cookie that Cookie Consent uses, to remember that
+# users have consented to cookies. Use to limit consent to a specific path
+# within your website.
+path: /
+
+# The domain for the consent cookie that Cookie Consent uses, to remember that
+# users have consented to cookies. Useful if your website uses multiple
+# subdomains, e.g. if your script is hosted at www.example.com you might
+# override this to example.com, thereby allowing the same consent cookie to be
+# read by subdomains like foo.example.com.
+domain:
+
+# The number of days Cookie Consent should store the user’s consent information
+# for.
+expiryDays: 365
