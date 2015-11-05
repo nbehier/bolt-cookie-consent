@@ -39,7 +39,6 @@ window.cookieconsent_options = {
     expiryDays: %expiryDays%
 };
 </script>
-<script src="cookieconsent.min.js"></script>
 EOM;
 
         $html = str_replace("%message%", htmlspecialchars($this->config['message'], ENT_QUOTES, "UTF-8"), $html);
@@ -49,17 +48,18 @@ EOM;
         if ($this->config['link'] != "") {
             $html = str_replace("%link%", "'" . htmlspecialchars($this->config['link'], ENT_QUOTES, "UTF-8") . "'", $html);
         } else {
-            $html = str_replace("%link%", null, $html);
+            $html = str_replace("%link%", 'null', $html);
         }
 
         if ($this->config['container'] != "") {
             $html = str_replace("%container%", "'" . htmlspecialchars($this->config['container'], ENT_QUOTES, "UTF-8") . "'", $html);
         } else {
-            $html = str_replace("%container%", null, $html);
+            $html = str_replace("%container%", 'null', $html);
         }
 
         $html = str_replace("%theme%", htmlspecialchars($this->config['theme'], ENT_QUOTES, "UTF-8"), $html);
         $html = str_replace("%path%", htmlspecialchars($this->config['path'], ENT_QUOTES, "UTF-8"), $html);
+        $html = str_replace("%domain%", htmlspecialchars($this->config['domain'], ENT_QUOTES, "UTF-8"), $html);
         $html = str_replace("%expiryDays%", $this->config['expiryDays'], $html);
 
         return $html;
