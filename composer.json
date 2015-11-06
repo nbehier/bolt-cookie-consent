@@ -1,6 +1,6 @@
 {
     "name": "leskis/cookie-consent",
-    "description": "Easily add Cookie conset script from Silktide. A free solution to the EU Cookie Law.",
+    "description": "Easily add Cookie Consent script from Silktide. A free solution to the EU Cookie Law.",
     "type": "bolt-extension",
     "keywords": ["cookie","Silktide","EU Cookie Law"],
     "require": {
