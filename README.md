@@ -2,7 +2,7 @@ Cookie Consent Bolt Extension
 =============================
 
 This [bolt.cm](https://bolt.cm/) extension enables Cookie Consent functionality
-form [Silktide.com](https://silktide.com/tools/cookie-consent/)
+from [Silktide.com](https://silktide.com/tools/cookie-consent/)
 
 For more information, see this page in [Silktide documentation](https://silktide.com/tools/cookie-consent/docs/installation/)
 
