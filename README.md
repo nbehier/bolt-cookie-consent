@@ -6,6 +6,8 @@ from [Silktide.com](https://silktide.com/tools/cookie-consent/)
 
 For more information, see this page in [Silktide documentation](https://silktide.com/tools/cookie-consent/docs/installation/)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a91b549b-1631-47eb-856b-229b959c01ef/mini.png)](https://insight.sensiolabs.com/projects/a91b549b-1631-47eb-856b-229b959c01ef)
+
 ### Requirements
 - Bolt 2.x installation
 
