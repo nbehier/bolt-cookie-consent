@@ -2,7 +2,6 @@
 
 namespace Bolt\Extension\Leskis\CookieConsent;
 
-use Bolt\Application;
 use Bolt\BaseExtension;
 
 class Extension extends BaseExtension
