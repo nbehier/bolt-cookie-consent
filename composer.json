@@ -4,7 +4,7 @@
     "type": "bolt-extension",
     "keywords": ["cookie","Silktide","EU Cookie Law"],
     "require": {
-        "bolt/bolt": ">=2.0.0,<3.0.0"
+        "bolt/bolt": "^3.0"
     },
     "license": "MIT",
     "authors": [
@@ -14,17 +14,20 @@
             "role": "Developer"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "files": [
             "init.php"
         ],
         "psr-4": {
-            "Bolt\\Extension\\Leskis\\CookieConsent\\": ""
+            "Bolt\\Extension\\Leskis\\CookieConsent\\": "src/"
         }
     },
 
     "extra": {
         "bolt-assets": "assets",
-        "bolt-icon": "assets/bolt-icon.png"
+        "bolt-icon": "assets/bolt-icon.png",
+        "bolt-class": "Bolt\\Extension\\Leskis\\CookieConsent\\CookieConsentExtension"
     }
 }

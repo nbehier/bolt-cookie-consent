@@ -7,7 +7,7 @@ form [Silktide.com](https://silktide.com/tools/cookie-consent/)
 For more information, see this page in [Silktide documentation](https://silktide.com/tools/cookie-consent/docs/installation/)
 
 ### Requirements
-- Bolt 2.x installation
+- Bolt 3.x installation
 
 ### Installation
 1. Login to your Bolt installation
