@@ -18,7 +18,7 @@
 	"prefer-stable" : true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\Leskis\\CookieConsent\\": "src/"
+            "Bolt\\Extension\\Leskis\\CookieConsent\\": "src"
         }
     },
 
