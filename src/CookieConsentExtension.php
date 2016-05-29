@@ -1,6 +1,9 @@
 <?php
 
 namespace Bolt\Extension\Leskis\CookieConsent;
+
+use Bolt\Asset\Snippet\Snippet;
+use Bolt\Asset\File\JavaScript;
 use Bolt\Extension\SimpleExtension;
 
 /**
@@ -77,10 +80,12 @@ EOM;
         return new \Twig_Markup($html, 'UTF-8');
     }
 
+    /*
     public function isSafe()
     {
         return true;
     }
+    */
 
     protected function getDefaultConfig()
     {
