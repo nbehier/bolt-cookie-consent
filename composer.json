@@ -31,7 +31,7 @@
         }
     },
     "extra": {
-        "bolt-assets": "assets",
+        "bolt-assets": "web",
         "bolt-icon": "assets/bolt-icon.png",
         "bolt-class": "Bolt\\Extension\\Leskis\\CookieConsent\\CookieConsentExtension"
     }
