@@ -4,6 +4,7 @@ namespace Bolt\Extension\Leskis\CookieConsent;
 
 use Bolt\Asset\Snippet\Snippet;
 use Bolt\Asset\File\JavaScript;
+use Bolt\Controller\Zone;
 use Bolt\Extension\SimpleExtension;
 
 /**
