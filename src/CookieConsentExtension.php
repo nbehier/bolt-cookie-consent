@@ -5,6 +5,7 @@ namespace Bolt\Extension\Leskis\CookieConsent;
 use Bolt\Asset\Snippet\Snippet;
 use Bolt\Asset\File\JavaScript;
 use Bolt\Controller\Zone;
+use Bolt\Asset\Target;
 use Bolt\Extension\SimpleExtension;
 
 /**
@@ -32,7 +33,7 @@ class CookieConsentExtension extends SimpleExtension
     {
         return [
             (new JavaScript('cookieconsent.min.js'))->setZone(Zone::FRONTEND)->setLate(true)->setPriority(998),
-            (new Snippet())->setCallback([$this, 'cookieConsentSnippet'])->setZone(Zone::FRONTEND)->setLate(true)->setPriority(997),
+            (new Snippet())->setCallback([$this, 'cookieConsentSnippet'])->setZone(Zone::FRONTEND)->setLocation(Target::BEFORE_BODY_JS)->setPriority(997),
         ];
     }
 
