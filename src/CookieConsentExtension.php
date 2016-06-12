@@ -11,34 +11,32 @@ use Bolt\Extension\SimpleExtension;
  */
 class CookieConsentExtension extends SimpleExtension
 {
-    protected function registerAssets()
-    {
-        $asset = new Snippet();
-        $asset->setCallback([$this, 'cookieConsentSnippet'])
-            ->setLate(true)
-            ->setPriority(997)
-        ;
 
+    protected function getDefaultConfig()
+    {
         return [
-            $asset,
+            'message'    => 'This website uses cookies to ensure you get the best experience on our website',
+            'dismiss'    => 'Got it!',
+            'learnMore'  => 'More info',
+            'link'       => '',
+            'container'  => '',
+            'theme'      => 'light-floating',
+            'path'       => '/',
+            'domain'     => '',
+            'expiryDays' => 365
         ];
     }
 
     protected function registerAssets()
     {
-        $asset = new JavaScript();
-        $asset->setFileName('cookieconsent.min.js')
-            ->setLate(true)
-            ->setPriority(998);
-
         return [
-            $asset,
+            (new JavaScript('cookieconsent.min.js'))->setZone(Zone::FRONTEND)->setLate(true)->setPriority(998),
+            (new Snippet())->setCallback([$this, 'cookieConsentSnippet'])->setZone(Zone::FRONTEND)->setLate(true)->setPriority(997),
         ];
     }
 
     public function cookieConsentSnippet()
     {
-        $app    = $this->getContainer();
         $config = $this->getConfig();
 
         $html = <<< EOM
@@ -78,27 +76,5 @@ EOM;
         $html = str_replace("%expiryDays%", $config['expiryDays'], $html);
 
         return new \Twig_Markup($html, 'UTF-8');
-    }
-
-    /*
-    public function isSafe()
-    {
-        return true;
-    }
-    */
-
-    protected function getDefaultConfig()
-    {
-        return [
-            'message'    => 'This website uses cookies to ensure you get the best experience on our website',
-            'dismiss'    => 'Got it!',
-            'learnMore'  => 'More info',
-            'link'       => '',
-            'container'  => '',
-            'theme'      => 'light-floating',
-            'path'       => '/',
-            'domain'     => '',
-            'expiryDays' => 365
-        ];
     }
 }
